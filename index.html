@@ -77,6 +77,44 @@
 
 </div>
 
+<!-- ## Answers to Questions
+
+### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+
+= getElementbyId is slao called a Id but getElementsByClassName also called class.
+querySelector() and querySelectorAll() are JavaScript DOM methods used to select HTML elements using CSS selectors. querySelector() selects the first element that matches a specified CSS selector.
+
+
+### 2. How do you create and insert a new element into the DOM?
+=A create and insert a new element into the DOM in JavaScript and you use the document.createElement() method and then insert it using methods like appendChild() or append().
+
+### 3. What is Event Bubbling? And how does it work?
+= Event Bubbling is a concept in JavaScript where an event starts on the element that was clicked and then moves up to  parent elements.
+When you click on something like a button the event first works on that button. After that the same event goes to parent element. Then it continues going up to the next parent and it can keep going up until  reaches the document.
+
+### 4. What is Event Delegation in JavaScript? Why is it useful?
+= Event Delegation is a technique in JavaScript where instead of adding event listeners to many child elements you add one event listener to their parent element and handle the events      from   there.
+It works because of Event Bubbling. When a child element is clicked, the event moves up to its parent. The parent can then check which child triggered the event and respond accordingly.
+Ex:
+<ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+### 5. What is the difference between preventDefault() and stopPropagation() methods?
+= For example when you click a link, it normally opens a new page. When you submit a form is normally reloads the page. If you use preventDefault() these default actions will not happen.
+Ex:
+
+document.querySelector("a").addEventListener("click", function(event) {
+  event.preventDefault();
+  console.log("Link click stopped");
+});
+
+ -->
+
+
+
 <script src="script.js"></script>
 
 </body>
