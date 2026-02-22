@@ -251,4 +251,3 @@ function showRejected(){
 
 showJobs();
 
- 
