@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application Tracker</title>
+
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  font-family: "Open Sans", sans-serif;
+}
+.active-btn {
+  background-color: #3b82f6 !important;
+  color: white !important;
+  border-color: #3b82f6 !important;
+}
+</style>
+</head>
+
+<body class="bg-[#F8FAFC] p-4 md:p-0">
+
+<header class="md:pl-[80px] md:pt-[60px]">
+  <h1 class="text-3xl font-bold">Job Application Tracker</h1>
+
+  <section class="mt-6 gap-3 grid grid-cols-1 md:grid-cols-3">
+
+    <div class="w-full md:w-[360px] bg-white p-5 rounded-2xl">
+      <h2 class="mb-5 font-bold">Total Applications</h2>
+      <span id="totalCount" class="font-bold text-xl">8</span>
+    </div>
+
+    <div class="w-full md:w-[360px] bg-white p-5 rounded-2xl">
+      <h2 class="mb-5 font-bold">Interview</h2>
+      <span id="interviewCount" class="font-bold text-xl">0</span>
+    </div>
+
+    <div class="w-full md:w-[360px] bg-white p-5 rounded-2xl">
+      <h2 class="mb-5 font-bold">Rejected</h2>
+      <span id="rejectedCount" class="font-bold text-xl">0</span>
+    </div>
+
+  </section>
+</header>
+
+<!-- Jobs Section -->
+<div id="jobsSection" class="md:pl-[80px] md:pt-[60px] mt-6 md:mt-0">
+
+  <div class="flex justify-between items-center mb-3 pr-6">
+    <h2 class="text-2xl font-bold">Available Jobs</h2>
+    <div>
+    <span id="tabCount" class="font-bold">8</span> <span id="job-text" class="font-bold">jobs</span> 
+    <span id="ofText" class="font-bold hidden"> of 8 jobs</span>
+    </div>
+  </div>
+
+  <div class="mb-4">
+    <button id="btn-all" onclick="showAll()" class="btn btn-sm mx-1 pl-[30px] pr-[30px]">All</button>
+    <button id="btn-intervew" onclick="showInterview()" class="btn btn-sm mx-1">Interview</button>
+    <button id="btn-rejected" onclick="showRejected()" class="btn btn-sm mx-1">Rejected</button>
+  </div>
+
+  <div id="jobContainer" class="grid grid-cols-1 gap-4">
+
+  </div>
+
+  <div id="emptyState" class="hidden mt-10 text-center">
+    <img src="jobs.png" alt="No jobs" class="w-40 mx-auto mb-4">
+    <h3 class="text-xl font-bold">No Jobs Available</h3>
+    <p class="text-gray-500">Please change job status to see jobs here.</p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
